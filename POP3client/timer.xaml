@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POP3client"
+        xmlns:Controls="clr-namespace:POP3client.Controls" x:Class="POP3client.Timer"
+        mc:Ignorable="d"
+        Title="定时发送" Height="300" Width="600">
+    <Grid Background="#FFD7FDC6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="时" VerticalAlignment="Center"
+            Margin="254,80,306,146" Grid.ColumnSpan="2" Height="44" RenderTransformOrigin="2.455,0.558"  />
+        <Label Content="分" VerticalAlignment="Center"
+            Margin="442,80,116,146" Grid.ColumnSpan="2" Height="44"  />
+
+        <Controls:WaterMarkTextBox Grid.ColumnSpan="2" Height="32" Margin="140,80,372,158" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Background="White" x:Name="iHour"/>
+        <Controls:WaterMarkTextBox Grid.ColumnSpan="2" Height="32" Margin="338,80,174,158" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Background="White" x:Name="iMinute"/>
+        <Controls:ImageButton Grid.Column="1" x:Name="Send_Later" Content="发送"
+            Icon="Icons/Get.png"
+            Click="SendButton_Click" ButtonType="IconWithTextVertical" Margin="226,136,212,44" RenderTransformOrigin="-0.01,1.081" Background="#FFE3F5DB"/>
+
+    </Grid>
+</Window>
